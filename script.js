@@ -1,25 +1,39 @@
 const formulaire = document.getElementById("formulaire")
 let quoteCount = 0
-const count = document.getElementById("count")
 
-formulaire.addEventListener("submit", () => {
-    const text = document.getElementById("citation")
-    const author = document.getElementById("nom")
-    // console.log(text, author)
-    addQuote()
+
+formulaire.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    const text = document.getElementById("citation").value
+    const author = document.getElementById("nom").value
+    console.log(text)
+    console.log(author)
+    addQuote(text, author)
 }
 )
 
-function addQuote(quote, author) {
+function addQuote(text, author) {
+
+    const count = document.getElementById("count")
     quoteCount += 1
-    const quote = document.createElement("p")
-    const author = document.createElement("p")
+    count.innerText = quoteCount
+
     const quoteList = document.getElementById("quote-list")
-    quote.classList.add("text")
-    quote.innerText = "On ne naît pas femme, on le devient."
-    quoteList.appendChild("citation")
-    author.classList.add("author")
-    author.innerText = "Simone de Beauvoir"
-    quoteList.appendChild("nom")
+    const quote =
+
+    const text1 = document.createElement("p")  
+    text1.classList.add("text")
+    text1.innerText = text
+
+     document.getElementsByClassName("quote").appendChild(text1)
+     document.getElementsByClassName("quote").appendChild(author1)
+
+    const author1 = document.createElement("p")
+    author1.classList.add("author")
+    author1.innerText = author
+
+    quoteList.appendChild(quote)                              // quote enfants de quote-list 
+
 }
 addQuote()
