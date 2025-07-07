@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Mes citations </title>
     <link rel="stylesheet" href="style.css">
      <script defer src="script.js"></script>
 </head>
@@ -13,11 +13,13 @@
     <h3 id="count"> 0 citations </h3>
     <hr>
 <form id="formulaire">
-    <input type="text" id="citation"> citation
-    <label></label>
-    <input type="text" id="nom"> nom auteur
-    <label> </label>
-    <button type="submit"> submit </button> 
+    <label for="citation"> citation : </label>
+    <input type="text" id="citation" required> 
+
+    <label for="nom"> Nom de l'auteur </label>
+    <input type="text" id="nom" required>
+    
+    <button type="submit"> Ajouter </button> 
 </form>
 <div id="quote-list">
     <div class="quote">
